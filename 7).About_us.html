@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - I3 Typing Master</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Gochi Hand', cursive;
+            background: #fff;
+        }
+        .container {
+            display: flex;
+            min-height: 80vh;
+        }
+        .left {
+            flex: 1;
+            background: #eee;
+            display: flex;
+            align-items: stretch;
+            justify-content: stretch;
+        }
+        .left img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .right {
+            flex: 1.2;
+            padding: 60px 40px 40px 40px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 40px;
+            padding: 30px 60px 0 0;
+        }
+        nav a {
+            color: #8d83b8;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-right: 10px;
+            position: relative;
+            transition: color 0.2s;
+        }
+        nav a.active, nav a:hover {
+            color: #6c5eb5;
+        }
+        nav a.active::after {
+            content: '';
+            display: block;
+            width: 80%;
+            height: 3px;
+            background: #6c5eb5;
+            border-radius: 2px;
+            margin: 0 auto;
+            margin-top: 2px;
+        }
+        .login-btn {
+            background: #8d83b8;
+            color: #fff;
+            border: none;
+            border-radius: 14px;
+            padding: 10px 28px;
+            font-size: 1.1em;
+            font-family: inherit;
+            cursor: pointer;
+            margin-left: 20px;
+            transition: background 0.2s;
+        }
+        .login-btn:hover {
+            background: #6c5eb5;
+        }
+        .contact-title {
+            font-size: 2.7em;
+            color: #6c5eb5;
+            margin-bottom: 30px;
+            font-family: 'Gochi Hand', cursive;
+        }
+        .form-row {
+            display: flex;
+            gap: 30px;
+        }
+        .form-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+            color: #222;
+            font-size: 1em;
+        }
+        .form-group input,
+        .form-group textarea {
+            border: none;
+            border-bottom: 2px solid #aaa;
+            background: transparent;
+            font-size: 1.1em;
+            padding: 6px 0;
+            margin-bottom: 2px;
+            font-family: inherit;
+            color: #444;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-bottom: 2px solid #6c5eb5;
+        }
+        .form-group textarea {
+            resize: none;
+            min-height: 38px;
+        }
+        .submit-btn {
+            background: #8d83b8;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 32px;
+            font-size: 1.1em;
+            font-family: inherit;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+        .submit-btn:hover {
+            background: #6c5eb5;
+        }
+        .footer {
+            background: #a89edb;
+            color: #fff;
+            padding: 40px 0 20px 0;
+            margin-top: 0;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 60px;
+        }
+        .footer-links {
+            display: flex;
+            gap: 80px;
+        }
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-links li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: text-decoration 0.2s;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .footer-social {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+        }
+        .footer-social span {
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        .footer-social-icons {
+            display: flex;
+            gap: 18px;
+        }
+        .footer-social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background: #8d83b8;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 1.5em;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+        .footer-social-icons a:hover {
+            background: #6c5eb5;
+        }
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+            }
+            .left, .right {
+                width: 100%;
+                min-height: 300px;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+                padding: 0 20px;
+            }
+            .footer-links {
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">Products</a>
+        <a href="#">About</a>
+        <a href="#" class="active">Contact</a>
+        <button class="login-btn">Log in</button>
+    </nav>
+    <div class="container">
+        <div class="left">
+            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" alt="Business Woman">
+        </div>
+        <div class="right">
+            <div class="contact-title">Get in touch</div>
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">FIRST NAME</label>
+                        <input type="text" id="first-name" name="first-name" value="Mark">
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">LAST NAME</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Enter your last name">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">PHONE NUMBER</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                    </div>
+                </div>
+                <div class="form-group" style="width: 100%;">
+                    <label for="message">MESSAGE</label>
+                    <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <span>Follow us on</span>
+                <div class="footer-social-icons">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.406.595 24 1.325 24H12.82v-9.294H9.692v-3.622h3.127V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.406 24 22.674V1.326C24 .592 23.406 0 22.675 0"></path></svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557a9.93 9.93 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724c-.951.564-2.005.974-3.127 1.195a4.92 4.92 0 0 0-8.384 4.482C7.691 8.095 4.066 6.13 1.64 3.161c-.542.929-.856 2.01-.857 3.17 0 2.188 1.115 4.116 2.823 5.247a4.904 4.904 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.936 4.936 0 0 1-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.867 9.867 0 0 1 0 21.543a13.94 13.94 0 0 0 7.548 2.209c9.058 0 14.009-7.513 14.009-14.009 0-.213-.005-.425-.014-.636A10.012 10.012 0 0 0 24 4.557z"></path></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.241 1.308 3.608.058 1.266.069 1.646.069 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.974.974-2.241 1.246-3.608 1.308-1.266.058-1.646.069-4.85.069s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.974-1.246-2.241-1.308-3.608C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.974-.974 2.241-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.775.131 4.602.396 3.635 1.364 2.668 2.332 2.403 3.505 2.344 4.782.013 8.332 0 8.741 0 12c0 3.259.013 3.668.072 4.948.059 1.277.324 2.45 1.292 3.417.967.967 2.14 1.232 3.417 1.292C8.332 23.987 8.741 24 12 24c3.259 0 3.668-.013 4.948-.072 1.277-.059 2.45-.324 3.417-1.292.967-.967 1.232-2.14 1.292-3.417.059-1.28.072-1.689.072-4.948 0-3.259-.013-3.668-.072-4.948-.059-1.277-.324-2.45-1.292-3.417-.967-.967-2.14-1.232-3.417-1.292C15.668.013 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
