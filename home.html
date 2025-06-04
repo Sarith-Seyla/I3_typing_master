@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>School Website</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="https://static.vecteezy.com/system/resources/previews/023/654/784/non_2x/golden-logo-template-free-png.png" alt="School Logo" />
+      <span class="school_name">SRSL School</span>
+    </div>
+    
+    <nav class="nav">
+      <ul id="nav-links">
+        <li><a href="#home"><span class="icon"><i class="fa-sharp fa-solid fa-house"></i></span>Home</a></li>
+        <li><a href="#programs"><span class="icon"><i class="fa-solid fa-graduation-cap"></i></span>Programs</a></li>
+        <li><a href="#news"><span class="icon"><i class="fa-solid fa-newspaper"></i></span>News</a></li>
+        <li><a href="#whyus"><span class="icon"><i class="fa-solid fa-magnifying-glass"></i></span>Why Us</a></li>
+        <li><a href="#about"><span class="icon"><i class="fa-solid fa-circle-info"></i></span>About Us</a></li>
+
+      </ul>
+      <button class="login-btn">Login / Sign up</button>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    </nav>
+  </header>
+
+  <main class="main-content" id="home">
+    <section class="welcome">
+      <h1>
+        WELCOME <br>
+        TO OUR <br>
+        SCHOOL
+      </h1>
+      <p>
+        SRSL Scool (SS) is private school with general 
+        education includes bilingual education (Khmer and 
+        English), coeducation, kindergarten, primary and   
+        high school.
+      </p>
+
+      <button class="animated-button" onclick="location.href='https://uiverse.io/gharsh11032000/loud-chicken-53'">
+        <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+          ></path>
+        </svg>
+        <span class="text">Contact</span>
+        <span class="circle"></span>
+        <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+          ></path>
+        </svg>
+      </button>
+      
+    </section>
+    
+    <!-- Desktop Gallery (grid) -->
+    <section class="gallery desktop-gallery">
+      <img src="https://thumbs.dreamstime.com/b/child-girl-schoolgirl-elementary-school-student-123686003.jpg" alt="Event 1" />
+      <img src="https://images.unsplash.com/photo-1524069290683-0457abfe42c3?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2Nob29sJTIwc3R1ZGVudHxlbnwwfHwwfHx8MA%3D%3D" alt="Event 2" />
+      <img src="https://studyportals.com/app/uploads/2024/11/shutterstock_2484576879-640x560.jpg" alt="Event 3" />
+      <img src="https://media.istockphoto.com/id/1447889800/photo/two-college-student-female-friends-smiling-ready-for-classes-at-the-university-campus.jpg?s=612x612&w=0&k=20&c=IIxWOgexUu8DHDq_jPNMgPeoqsy77w9da_-9dUZeQD4=" alt="Event 4" />
+    </section>
+
+    <!-- Mobile Gallery (Swiper) -->
+    <section class="gallery swiper mobile-gallery">
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <img src="https://thumbs.dreamstime.com/b/child-girl-schoolgirl-elementary-school-student-123686003.jpg">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <img src="https://images.unsplash.com/photo-1524069290683-0457abfe42c3?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2Nob29sJTIwc3R1ZGVudHxlbnwwfHwwfHx8MA%3D%3D">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img src="https://studyportals.com/app/uploads/2024/11/shutterstock_2484576879-640x560.jpg">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 4</div>
+          <img src="https://media.istockphoto.com/id/1447889800/photo/two-college-student-female-friends-smiling-ready-for-classes-at-the-university-campus.jpg?s=612x612&w=0&k=20&c=IIxWOgexUu8DHDq_jPNMgPeoqsy77w9da_-9dUZeQD4=">
+        </div>
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+      </div>
+    </section>
+
+  </main>
+
+
+  <div class="Program_container" id="programs">
+    <h2>Our Smarty Program</h2>
+
+    <div class="program-card">
+      <img src="https://www.successacademies.org/wp-content/uploads/2024/12/6-successacademies_25048656-1-scaled.jpg" alt="Kindergarten">
+      <div class="program-info">
+        <h3>Kindergarten</h3>
+        <p>Our Kindergarten program provides a caring and joyful environment where children learn through play, creativity, and exploration. We focus on building confidence, basic skills, and a love for learning from an early age.</p>
+      </div>
+    </div>
+
+    <div class="program-card">
+      <img src="https://files.schudio.com/waterside-primary-school/images/blocks/Waterside-180423-0184.jpg" alt="Primary School">
+      <div class="program-info">
+        <h3>Primary School</h3>
+        <p>Our Primary program builds a strong foundation in reading, writing, math, and life skills. We guide students to think critically, behave ethically, and grow into active learners in a supportive classroom.</p>
+      </div>
+    </div>
+
+    <div class="program-card">
+      <img src="https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1698686522/morristown/sglufpkzo0enltzt0a7o/MiddleSchool_PageBanner.jpg" alt="Middle School">
+      <div class="program-info">
+        <h3>Middle School</h3>
+        <p>Our Middle School program helps students grow academically and personally. We encourage independent thinking, teamwork, and responsibility, preparing them for high school and beyond.</p>
+      </div>
+    </div>
+
+    <div class="program-card">
+      <img src="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202403/MIT-SchoolQuality-01_0.jpg?itok=eIDmx516" alt="High School">
+      <div class="program-info">
+        <h3>High School</h3>
+        <p>Our High School program prepares students for university and future careers. We focus on academic excellence, leadership, and strong values, helping students succeed in a global society.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="News_container" id="news">
+    <h2>News and Announcement</h2>
+    <div class="news-scroll">
+      <div class="news-card fade-in">
+        <img src="https://www.ocregister.com/wp-content/uploads/migration/moo/moo0n9-b781129871z.120130619170619000ga61eevn3.1.jpg?w=640" alt="News 1">
+        <p>អបអរសាទរកម្មវិធីបញ្ឃប់ការសិក្សារបស់សិស្សានុសិស្ស <br> ឆ្នាំសិក្សា ២០២១-២០២២</p>
+      </div>
+      <div class="news-card fade-in">
+        <img src="https://www.ocregister.com/wp-content/uploads/migration/moo/moo0n9-b781129871z.120130619170619000ga61eevn3.1.jpg?w=640" alt="News 1">
+        <p>អបអរសាទរកម្មវិធីបញ្ឃប់ការសិក្សារបស់សិស្សានុសិស្ស <br> ឆ្នាំសិក្សា ២០២១-២០២២</p>
+      </div>
+      <div class="news-card fade-in">
+        <img src="https://www.ocregister.com/wp-content/uploads/migration/moo/moo0n9-b781129871z.120130619170619000ga61eevn3.1.jpg?w=640" alt="News 1">
+        <p>អបអរសាទរកម្មវិធីបញ្ឃប់ការសិក្សារបស់សិស្សានុសិស្ស <br> ឆ្នាំសិក្សា ២០២១-២០២២</p>
+      </div>
+      <div class="news-card fade-in">
+        <img src="https://www.ocregister.com/wp-content/uploads/migration/moo/moo0n9-b781129871z.120130619170619000ga61eevn3.1.jpg?w=640" alt="News 1">
+        <p>អបអរសាទរកម្មវិធីបញ្ឃប់ការសិក្សារបស់សិស្សានុសិស្ស <br> ឆ្នាំសិក្សា ២០២១-២០២២</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="core-values" id="whyus">
+    <h2>Our Core Values</h2>
+    <p class="subtitle">we don’t just teach — we inspire, guide, and prepare students <br> to thrive in life and learning.</p>
+    <div class="core-box">
+      <ul>
+        <li>Authorized by the Ministry of Education since March 7, 2019</li>
+        <li>High-quality teaching by experienced and caring educators</li>
+        <li>Modern facilities with spacious classrooms, computer labs, and play areas</li>
+        <li>Full education program from Kindergarten to Grade 12</li>
+        <li>Focus on values like ethics, creativity, integrity, and international-mindedness</li>
+        <li>Strong partnership with parents for every child’s success</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="about-us" id="about">
+    <h2>A Brighter Future <br> For Your Children</h2>
+    <p class="textbox">
+      SRSL Scool was officially authorized by the Ministry of Education, Youth and Sports on March 7, 2019. The school is managed by a Board of Trustees, which ensures quality, long-term planning, and effective administration. <br> <br>
+      Our mission is to provide high-quality education that combines academic excellence with strong values. We aim to nurture students with ethics, creativity, integrity, and international awareness, preparing them to succeed in school and in life. <br> <br>
+      SRSL Scool offers a full education from Kindergarten to Grade 12, following a curriculum aligned with national standards. Our team of experienced teachers is committed to student success through care, dedication, and professional teaching.
+      With spacious classrooms, modern equipment, and a safe, supportive environment, we create a place where every child can learn, grow, and shine.
+    </p>
+  </div>
+
+
+  <section class="teachers">
+    <h2>Our Talented Teachers</h2>
+    <div class="teacher-cards">
+      <div class="teacher-card">
+        <img src="https://gsep.pepperdine.edu/blog/images/how-much-could-a-masters-degree-increase-your-teaching-salary.png" alt="Sarith Seyla">
+        <h4>Sarith Seyla</h4>
+        <p>Headmaster</p>
+      </div>
+      <div class="teacher-card">
+        <img src="https://gsep.pepperdine.edu/blog/images/how-much-could-a-masters-degree-increase-your-teaching-salary.png" alt="Sarith Seyla">
+        <h4>Sarith Seyla</h4>
+        <p>Math Teacher</p>
+      </div>
+      <div class="teacher-card">
+        <img src="https://gsep.pepperdine.edu/blog/images/how-much-could-a-masters-degree-increase-your-teaching-salary.png" alt="Sarith Seyla">
+        <h4>Sarith Seyla</h4>
+        <p>English Teacher</p>
+      </div>
+      <div class="teacher-card">
+        <img src="https://gsep.pepperdine.edu/blog/images/how-much-could-a-masters-degree-increase-your-teaching-salary.png" alt="Sarith Seyla">
+        <h4>Sarith Seyla</h4>
+        <p>Art Teacher</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section class="contact" id="contact">
+    <h2>Let's Contact Us</h2>
+    <div class="contact-content">
+      <div class="contact-info">
+        <p>Feel free to reach out—we are happy to answer your questions and welcome you to visit our school!</p>
+        <p><strong>📞 Call:</strong> +85596202272</p>
+        <p><strong>📧 Email:</strong> sarithseyla9999@gmail.com</p>
+        <p><strong>📍 Location:</strong> Phnom Penh, Cambodia</p>
+      </div>
+
+      <form class="contact-form">
+        <div class="row">
+          <input type="text" placeholder="Full name" required>
+          <input type="email" placeholder="Your email address" required>
+        </div>
+        <textarea placeholder="Type your message here" rows="4" required></textarea>
+        <button type="submit">Send message</button>
+      </form>
+    </div>
+
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57407.66892654138!2d104.82623705598992!3d11.579988262193933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109517388680e15%3A0x63057e6682968f5!2sInstitute%20of%20Technology%20of%20Cambodia!5e1!3m2!1sen!2skh!4v1748858164974!5m2!1sen!2skh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="https://static.vecteezy.com/system/resources/previews/023/654/784/non_2x/golden-logo-template-free-png.png" alt="Mana School Logo" class="logo" />
+        <h3>SRSL Scool</h3>
+      </div>
+
+      <div class="footer-section">
+        <h3>Our Programs</h3>
+        <ul>
+          <li>Kindergarten</li>
+          <li>Primary School</li>
+          <li>Middle School</li>
+          <li>High School</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p><i class="fa-solid fa-phone-volume"></i> Call: +855962022272</p>
+        <p><i class="fa-solid fa-envelope-circle-check"></i> Email: sarithseyla9999@gmail.com</p>
+        <p><i class="fa-solid fa-location-dot"></i> Location: Phnom Penh, Cambodia</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Useful Link</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook" style="color: #5062AA;"></i></a>
+          <a href="#"><i class="fa-brands fa-telegram" style="color: #5062AA;"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script> 
+
+</body>
+</html>
